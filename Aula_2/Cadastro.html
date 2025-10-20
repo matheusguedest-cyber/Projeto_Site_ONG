@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - ONG Projetos do Amanhã</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topo">
+    <img src="Imagens/New_Logo_Sementes_menor.png" alt="Logo da ONG" class="logo">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="NossosProjetos.html">Projetos</a>
+        <a href="Cadastro.html" class="ativo">Cadastro</a>
+    </nav>
+</header>
+
+<main class="conteudo">
+    <h2>Cadastre-se como voluntário</h2>
+    <form class="formulario">
+        <label>Nome completo:</label>
+        <input type="text" name="nome" required>
+
+        <label>E-mail:</label>
+        <input type="email" name="email" required>
+
+        <label>Telefone:</label>
+        <input type="tel" name="telefone">
+
+        <label>Mensagem:</label>
+        <textarea name="mensagem"></textarea>
+
+        <button type="submit" class="botao">Enviar</button>
+    </form>
+</main>
+
+<footer class="rodape">
+    <p>&copy; 2025 Projetos do Amanhã | Todos os direitos reservados</p>
+</footer>
+</body>
+</html>
