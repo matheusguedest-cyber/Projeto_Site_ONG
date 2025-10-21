@@ -3,42 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - ONG Projetos do Amanhã</title>
+    <title>Cadastro de Voluntário - Sementes do Amanhã</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="topo">
-    <img src="Imagens/New_Logo_Sementes_menor.png" alt="Logo da ONG" class="logo">
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-    <nav class="menu">
-        <a href="index.html">Início</a>
-        <a href="NossosProjetos.html">Projetos</a>
-        <a href="Cadastro.html" class="ativo">Cadastro</a>
-    </nav>
+<header class="cabecalho">
+    <img src="Imagens/New_Logo_Sementes_menor.png" alt="Logo Sementes do Amanhã" class="logo">
+    <h1 class="titulo">Seja um Voluntário</h1>
 </header>
 
-<main class="conteudo">
-    <h2>Cadastre-se como voluntário</h2>
-    <form class="formulario">
-        <label>Nome completo:</label>
-        <input type="text" name="nome" required>
+<nav class="menu">
+    <a href="index.html">Início</a>
+    <a href="NossosProjetos.html">Nossos Projetos</a>
+    <a href="Cadastro.html" class="ativo">Seja um Voluntário</a>
+</nav>
 
-        <label>E-mail:</label>
-        <input type="email" name="email" required>
+<section class="formulario">
+    <h2>Cadastre-se</h2>
+    <form>
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required>
 
-        <label>Telefone:</label>
-        <input type="tel" name="telefone">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
 
-        <label>Mensagem:</label>
-        <textarea name="mensagem"></textarea>
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX">
 
-        <button type="submit" class="botao">Enviar</button>
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" min="16" max="100">
+
+        <label for="area">Área de Interesse:</label>
+        <select id="area" name="area">
+            <option>Educação</option>
+            <option>Esporte</option>
+            <option>Arte e Cultura</option>
+        </select>
+
+        <label for="mensagem">Por que quer ser voluntário?</label>
+        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
+        <button type="submit" class="botao-enviar">Enviar Cadastro</button>
     </form>
-</main>
+</section>
 
 <footer class="rodape">
-    <p>&copy; 2025 Projetos do Amanhã | Todos os direitos reservados</p>
+    <p>© 2025 Sementes do Amanhã | Todos os direitos reservados</p>
 </footer>
 </body>
 </html>

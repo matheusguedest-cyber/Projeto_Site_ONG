@@ -3,46 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nossos Projetos - ONG Projetos do Amanhã</title>
+    <title>Nossos Projetos - Sementes do Amanhã</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="topo">
-    <img src="Imagens/New_Logo_Sementes_menor.png" alt="Logo da ONG" class="logo">
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-    <nav class="menu">
-        <a href="index.html">Início</a>
-        <a href="NossosProjetos.html" class="ativo">Projetos</a>
-        <a href="Cadastro.html">Cadastro</a>
-    </nav>
+<header class="cabecalho">
+    <img src="Imagens/New_Logo_Sementes_menor.png" alt="Logo Sementes do Amanhã" class="logo">
+    <h1 class="titulo">Nossos Projetos</h1>
 </header>
 
-<main class="conteudo">
-    <h2>Nossos Projetos</h2>
-    <section class="grid-projetos">
-        <article class="card">
-            <img src="Imagens/New_Logo_Sementes_menor.png" alt="Projeto 1">
-            <h3>Projeto Sementes</h3>
-            <p>Educação e arte para crianças e adolescentes.</p>
-        </article>
+<nav class="menu">
+    <a href="index.html">Início</a>
+    <a href="NossosProjetos.html" class="ativo">Nossos Projetos</a>
+    <a href="Cadastro.html">Seja um Voluntário</a>
+</nav>
 
-        <article class="card">
-            <img src="Imagens/New_Logo_Sementes_menor.png" alt="Projeto 2">
-            <h3>Esporte e Futuro</h3>
-            <p>Esporte como ferramenta de inclusão social.</p>
-        </article>
+<section class="projetos">
+    <div class="card">
+        <h3>Projeto Educação e Futuro</h3>
+        <p>Oficinas de reforço escolar e inclusão digital para crianças.</p>
+        <a href="#modal1" class="botao">Saiba Mais</a>
+    </div>
 
-        <article class="card">
-            <img src="Imagens/New_Logo_Sementes_menor.png" alt="Projeto 3">
-            <h3>Jovens Líderes</h3>
-            <p>Formação de jovens agentes de transformação.</p>
-        </article>
-    </section>
-</main>
+    <div class="card">
+        <h3>Projeto Esporte e Cidadania</h3>
+        <p>Atividades esportivas que incentivam disciplina, cooperação e respeito.</p>
+        <a href="#modal2" class="botao">Saiba Mais</a>
+    </div>
+
+    <div class="card">
+        <h3>Projeto Arte e Cultura</h3>
+        <p>Oficinas de música, teatro e artes plásticas como forma de expressão.</p>
+        <a href="#modal3" class="botao">Saiba Mais</a>
+    </div>
+</section>
+
+<!-- MODAIS CSS-ONLY -->
+<div id="modal1" class="modal">
+    <div class="modal-conteudo">
+        <a href="#" class="fechar">&times;</a>
+        <h2>Projeto Educação e Futuro</h2>
+        <p>Voltado a crianças do ensino fundamental, o projeto oferece reforço escolar, alfabetização digital e incentivo à leitura.</p>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-conteudo">
+        <a href="#" class="fechar">&times;</a>
+        <h2>Projeto Esporte e Cidadania</h2>
+        <p>Promove atividades esportivas como futebol e atletismo, reforçando valores como respeito, empatia e disciplina.</p>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-conteudo">
+        <a href="#" class="fechar">&times;</a>
+        <h2>Projeto Arte e Cultura</h2>
+        <p>Oferece oficinas de arte e cultura que estimulam a criatividade e o trabalho em grupo, fortalecendo o senso de comunidade.</p>
+    </div>
+</div>
 
 <footer class="rodape">
-    <p>&copy; 2025 Projetos do Amanhã | Todos os direitos reservados</p>
+    <p>© 2025 Sementes do Amanhã | Todos os direitos reservados</p>
 </footer>
 </body>
 </html>
