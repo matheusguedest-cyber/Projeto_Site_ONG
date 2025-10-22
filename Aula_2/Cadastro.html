@@ -3,52 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Voluntário - Sementes do Amanhã</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<header class="cabecalho">
-    <img src="Imagens/New_Logo_Sementes_menor.png" alt="Logo Sementes do Amanhã" class="logo">
-    <h1 class="titulo">Seja um Voluntário</h1>
-</header>
+    <header>
+        <img src="Imagens/New_Logo_Sementes_menor.png" alt="Logo Sementes do Amanhã" class="logo">
+        <h1>Cadastro de Voluntário</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="NossosProjetos.html">Projetos</a></li>
+                <li><a href="Cadastro.html">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<nav class="menu">
-    <a href="index.html">Início</a>
-    <a href="NossosProjetos.html">Nossos Projetos</a>
-    <a href="Cadastro.html" class="ativo">Seja um Voluntário</a>
-</nav>
+    <main id="formulario">
+        <form>
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" required>
 
-<section class="formulario">
-    <h2>Cadastre-se</h2>
-    <form>
-        <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" name="nome" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </fieldset>
 
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX">
+            <fieldset>
+                <legend>Endereço</legend>
+                <label for="rua">Rua:</label>
+                <input type="text" id="rua" name="rua">
 
-        <label for="idade">Idade:</label>
-        <input type="number" id="idade" name="idade" min="16" max="100">
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="numero">
 
-        <label for="area">Área de Interesse:</label>
-        <select id="area" name="area">
-            <option>Educação</option>
-            <option>Esporte</option>
-            <option>Arte e Cultura</option>
-        </select>
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro">
 
-        <label for="mensagem">Por que quer ser voluntário?</label>
-        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade">
 
-        <button type="submit" class="botao-enviar">Enviar Cadastro</button>
-    </form>
-</section>
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado">
+            </fieldset>
 
-<footer class="rodape">
-    <p>© 2025 Sementes do Amanhã | Todos os direitos reservados</p>
-</footer>
+            <fieldset>
+                <legend>Interesse</legend>
+                <label for="area">Área de atuação desejada:</label>
+                <select id="area" name="area">
+                    <option>Educação</option>
+                    <option>Esporte</option>
+                    <option>Cultura</option>
+                    <option>Administração</option>
+                </select>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem"></textarea>
+            </fieldset>
+
+            <button type="submit" class="botao">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sementes do Amanhã | Todos os direitos reservados</p>
+    </footer>
 </body>
 </html>

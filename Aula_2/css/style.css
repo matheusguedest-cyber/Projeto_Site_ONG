@@ -1,325 +1,150 @@
-/* ================================
-   🌱 SEMENTES DO AMANHÃ - STYLE.CSS
-   Tema: Verde natural escuro
-   Responsivo, com Grid e Flexbox
-   ================================ */
-
-/* ===== VARIÁVEIS DE TEMA ===== */
-:root {
-  --verde-escuro: #2e7d32;
-  --verde-claro: #66bb6a;
-  --verde-hover: #388e3c;
-  --cinza-claro: #f4f4f4;
-  --cinza-texto: #333;
-  --branco: #fff;
-  --sombra: rgba(0, 0, 0, 0.2);
-  --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* ===== RESET ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: var(--fonte-principal);
-  color: var(--cinza-texto);
-  background-color: var(--cinza-claro);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
 }
 
-/* ===== CABEÇALHO ===== */
-.cabecalho {
-  background-color: var(--verde-escuro);
-  color: var(--branco);
-  text-align: center;
-  padding: 1.5rem;
-  box-shadow: 0 2px 5px var(--sombra);
+/* Cabeçalho */
+header {
+    background-color: #5ba66b;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
 }
-
 .logo {
-  width: 120px;
-  display: block;
-  margin: 0 auto 10px;
+  width: 90px;
+}
+header h1 {
+    margin: 5px;
+    font-size: 1.8em;
 }
 
-.titulo {
-  font-size: 2rem;
-  font-weight: bold;
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* ===== MENU ===== */
-.menu {
-  background-color: var(--verde-claro);
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 1rem;
+nav li {
+    display: inline-block;
+    margin: 0 15px;
 }
 
-.menu a {
-  color: var(--branco);
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s, transform 0.3s;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.menu a:hover {
-  color: var(--verde-escuro);
-  transform: scale(1.1);
+nav a:hover {
+    text-decoration: underline;
 }
 
-.menu a.ativo {
-  text-decoration: underline;
-}
-
-/* ===== CARROSSEL CSS-ONLY ===== */
+/* Carrossel */
 .carrossel {
-  width: 100%;
-  overflow: hidden;
-  height: 250px;
-  position: relative;
-  margin-top: 20px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
 }
 
-.slides {
-  display: flex;
-  width: 300%;
-  animation: slide 10s infinite;
+.carrossel img {
+    width: 300px;
+    border-radius: 8px;
 }
 
-.slides img {
-  width: 100%;
-  object-fit: contain;
+/* Cards e conteúdo */
+main {
+    padding: 20px;
+    display: grid;
+    gap: 20px;
 }
 
-@keyframes slide {
-  0% { transform: translateX(0); }
-  33% { transform: translateX(-100%); }
-  66% { transform: translateX(-200%); }
-  100% { transform: translateX(0); }
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
-/* ===== SOBRE ===== */
-.sobre {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background: var(--branco);
-  border-radius: 10px;
-  box-shadow: 0 2px 10px var(--sombra);
+section, article, aside {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.sobre h2 {
-  text-align: center;
-  color: var(--verde-escuro);
-  margin-bottom: 1rem;
+.botao {
+    display: inline-block;
+    background-color: #5ba66b;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-.sobre p {
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  text-align: justify;
+.botao:hover {
+    background-color: #4c915b;
 }
 
-/* ===== CONTATO ===== */
-.contato {
-  text-align: center;
-  padding: 2rem;
-  background-color: var(--verde-claro);
-  color: var(--branco);
-}
-
-.botao-contato {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 1.5rem;
-  background-color: var(--verde-escuro);
-  color: var(--branco);
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.botao-contato:hover {
-  background-color: var(--verde-hover);
-}
-
-/* ===== SEÇÃO DE PROJETOS ===== */
-.projetos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-}
-
-.card {
-  background-color: var(--branco);
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px var(--sombra);
-  text-align: center;
-}
-
-.card h3 {
-  color: var(--verde-escuro);
-  margin-bottom: 0.5rem;
-}
-
-.card p {
-  margin-bottom: 1rem;
-}
-
-.card .botao {
-  background-color: var(--verde-escuro);
-  color: var(--branco);
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.card .botao:hover {
-  background-color: var(--verde-hover);
-}
-
-/* ===== MODAIS (POP-UPS) ===== */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal:target {
-  display: flex;
-}
-
-.modal-conteudo {
-  background-color: var(--branco);
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 90%;
-  position: relative;
-  box-shadow: 0 2px 10px var(--sombra);
-}
-
-.modal-conteudo h2 {
-  color: var(--verde-escuro);
-  margin-bottom: 1rem;
-}
-
-.modal-conteudo p {
-  text-align: justify;
-}
-
-.fechar {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  text-decoration: none;
-  color: var(--verde-escuro);
-  font-size: 1.5rem;
-}
-
-/* ===== FORMULÁRIO ===== */
-.formulario {
-  max-width: 600px;
-  margin: 2rem auto;
-  background-color: var(--branco);
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px var(--sombra);
-}
-
-.formulario h2 {
-  text-align: center;
-  color: var(--verde-escuro);
-  margin-bottom: 1.5rem;
-}
-
+/* Formulário */
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-label {
-  font-weight: bold;
+fieldset {
+    border: none;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: bold;
+    color: #5ba66b;
 }
 
 input, select, textarea {
-  padding: 0.6rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-.botao-enviar {
-  background-color: var(--verde-escuro);
-  color: var(--branco);
-  padding: 0.8rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
+/* Modais */
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.botao-enviar:hover {
-  background-color: var(--verde-hover);
+/* Rodapé */
+footer {
+    background-color: #5ba66b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-/* ===== RODAPÉ ===== */
-.rodape {
-  background-color: var(--verde-escuro);
-  color: var(--branco);
-  text-align: center;
-  padding: 1rem;
-  margin-top: auto;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-/* ===== RESPONSIVIDADE ===== */
+/* Responsividade */
 @media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-    align-items: center;
-  }
+    header h1 {
+        font-size: 1.4em;
+    }
 
-  .sobre, .formulario {
-    margin: 1rem;
-  }
+    nav li {
+        display: block;
+        margin: 8px 0;
+    }
 
-  .rodape {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .titulo {
-    font-size: 1.5rem;
-  }
-
-  .carrossel {
-    height: 180px;
-  }
-
-  .logo {
-    width: 90px;
-  }
-
-  .botao-contato {
-    font-size: 0.9rem;
-  }
+    .carrossel img {
+        width: 100%;
+    }
 }

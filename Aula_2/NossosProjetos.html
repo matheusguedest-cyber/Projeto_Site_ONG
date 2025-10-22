@@ -3,68 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nossos Projetos - Sementes do Amanhã</title>
+    <title>Nossos Projetos</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<header class="cabecalho">
-    <img src="Imagens/New_Logo_Sementes_menor.png" alt="Logo Sementes do Amanhã" class="logo">
-    <h1 class="titulo">Nossos Projetos</h1>
-</header>
+    <header>
+      <img src="Imagens/New_Logo_Sementes_menor.png" alt="Logo Sementes do Amanhã" class="logo">    
+      <h1>Nossos Projetos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="NossosProjetos.html">Projetos</a></li>
+                <li><a href="Cadastro.html">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<nav class="menu">
-    <a href="index.html">Início</a>
-    <a href="NossosProjetos.html" class="ativo">Nossos Projetos</a>
-    <a href="Cadastro.html">Seja um Voluntário</a>
-</nav>
+    <main class="projetos-grid">
+        <section>
+            <h2>Projeto Educação e Futuro</h2>
+            <p>Educação transformando vidas.</p>
+            <button class="botao" onclick="document.getElementById('modal1').showModal()">Saiba Mais</button>
+        </section>
 
-<section class="projetos">
-    <div class="card">
+        <section>
+            <h2>Projeto Esporte e Cidadania</h2>
+            <p>O esporte como ferramenta de inclusão.</p>
+            <button class="botao" onclick="document.getElementById('modal2').showModal()">Saiba Mais</button>
+        </section>
+
+        <section>
+            <h2>Projeto Cultura Viva</h2>
+            <p>Valorizando a arte e a cultura local.</p>
+            <button class="botao" onclick="document.getElementById('modal3').showModal()">Saiba Mais</button>
+        </section>
+
+        <section>
+            <h2>Doe e Faça a Diferença</h2>
+            <p>
+                Cada contribuição ajuda a manter nossas atividades e impactar mais vidas.
+                Aceitamos doações de alimentos, roupas, materiais escolares e contribuições financeiras.
+            </p>
+            <a href="Cadastro.html#formulario" class="botao">Fazer Doação</a>
+        </section>
+    </main>
+
+    <!-- Modais -->
+    <dialog id="modal1">
         <h3>Projeto Educação e Futuro</h3>
-        <p>Oficinas de reforço escolar e inclusão digital para crianças.</p>
-        <a href="#modal1" class="botao">Saiba Mais</a>
-    </div>
+        <p>
+            O projeto visa oferecer reforço escolar e atividades educativas para crianças e adolescentes.
+            Com foco em leitura, matemática e tecnologia, buscamos reduzir a evasão escolar e promover a igualdade de oportunidades.
+        </p>
+        <button onclick="document.getElementById('modal1').close()">Fechar</button>
+    </dialog>
 
-    <div class="card">
+    <dialog id="modal2">
         <h3>Projeto Esporte e Cidadania</h3>
-        <p>Atividades esportivas que incentivam disciplina, cooperação e respeito.</p>
-        <a href="#modal2" class="botao">Saiba Mais</a>
-    </div>
+        <p>
+            O projeto incentiva a prática esportiva como instrumento de formação humana.
+            Oferecemos aulas de futebol, vôlei e capoeira, estimulando o trabalho em equipe e o respeito mútuo.
+        </p>
+        <button onclick="document.getElementById('modal2').close()">Fechar</button>
+    </dialog>
 
-    <div class="card">
-        <h3>Projeto Arte e Cultura</h3>
-        <p>Oficinas de música, teatro e artes plásticas como forma de expressão.</p>
-        <a href="#modal3" class="botao">Saiba Mais</a>
-    </div>
-</section>
+    <dialog id="modal3">
+        <h3>Projeto Cultura Viva</h3>
+        <p>
+            A iniciativa promove oficinas de música, teatro e dança para crianças e adolescentes da comunidade.
+            Acreditamos que a cultura é essencial para a construção da identidade e para o fortalecimento social.
+        </p>
+        <button onclick="document.getElementById('modal3').close()">Fechar</button>
+    </dialog>
 
-<!-- MODAIS CSS-ONLY -->
-<div id="modal1" class="modal">
-    <div class="modal-conteudo">
-        <a href="#" class="fechar">&times;</a>
-        <h2>Projeto Educação e Futuro</h2>
-        <p>Voltado a crianças do ensino fundamental, o projeto oferece reforço escolar, alfabetização digital e incentivo à leitura.</p>
-    </div>
-</div>
-
-<div id="modal2" class="modal">
-    <div class="modal-conteudo">
-        <a href="#" class="fechar">&times;</a>
-        <h2>Projeto Esporte e Cidadania</h2>
-        <p>Promove atividades esportivas como futebol e atletismo, reforçando valores como respeito, empatia e disciplina.</p>
-    </div>
-</div>
-
-<div id="modal3" class="modal">
-    <div class="modal-conteudo">
-        <a href="#" class="fechar">&times;</a>
-        <h2>Projeto Arte e Cultura</h2>
-        <p>Oferece oficinas de arte e cultura que estimulam a criatividade e o trabalho em grupo, fortalecendo o senso de comunidade.</p>
-    </div>
-</div>
-
-<footer class="rodape">
-    <p>© 2025 Sementes do Amanhã | Todos os direitos reservados</p>
-</footer>
+    <footer>
+        <p>&copy; 2025 Sementes do Amanhã | Todos os direitos reservados</p>
+    </footer>
 </body>
 </html>
