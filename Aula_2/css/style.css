@@ -5,7 +5,6 @@ body {
     color: #333;
 }
 
-/* Cabeçalho */
 header {
     background-color: #5ba66b;
     color: white;
@@ -40,7 +39,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Carrossel */
 .carrossel {
     display: flex;
     overflow: hidden;
@@ -54,7 +52,6 @@ nav a:hover {
     border-radius: 8px;
 }
 
-/* Cards e conteúdo */
 main {
     padding: 20px;
     display: grid;
@@ -89,7 +86,6 @@ section, article, aside {
     background-color: #4c915b;
 }
 
-/* Formulário */
 form {
     background-color: white;
     padding: 20px;
@@ -114,7 +110,6 @@ input, select, textarea {
     border: 1px solid #ccc;
 }
 
-/* Modais */
 dialog {
     border: none;
     border-radius: 10px;
@@ -122,7 +117,6 @@ dialog {
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-/* Rodapé */
 footer {
     background-color: #5ba66b;
     color: white;
@@ -133,7 +127,6 @@ footer {
     width: 100%;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.4em;
