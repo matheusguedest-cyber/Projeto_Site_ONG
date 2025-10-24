@@ -47,33 +47,43 @@
             </p>
             <a href="Cadastro.html#formulario" class="botao">Fazer Doação</a>
         </section>
+
+        <!-- Botão para abrir o formulário -->
+        <section>
+            <button id="abrirForm" class="botao">Sugerir Novo Projeto</button>
+        </section>
+
+        <!-- Formulário (inicialmente oculto) -->
+        <section id="formSugestao" style="display: none;">
+            <h3>Sugerir Novo Projeto</h3>
+            <form id="sugestaoProjetoForm">
+                <label for="nomeProjeto">Nome do Projeto:</label>
+                <input type="text" id="nomeProjeto" name="nomeProjeto" required>
+
+                <label for="descricaoProjeto">Descrição:</label>
+                <textarea id="descricaoProjeto" name="descricaoProjeto" required></textarea>
+
+                <button type="submit" class="botao">Enviar Sugestão</button>
+            </form>
+        </section>
     </main>
 
-    <!-- Modais -->
+    <!-- Modais existentes -->
     <dialog id="modal1">
         <h3>Projeto Educação e Futuro</h3>
-        <p>
-            O projeto visa oferecer reforço escolar e atividades educativas para crianças e adolescentes.
-            Com foco em leitura, matemática e tecnologia, buscamos reduzir a evasão escolar e promover a igualdade de oportunidades.
-        </p>
+        <p>O projeto visa oferecer reforço escolar e atividades educativas...</p>
         <button onclick="document.getElementById('modal1').close()">Fechar</button>
     </dialog>
 
     <dialog id="modal2">
         <h3>Projeto Esporte e Cidadania</h3>
-        <p>
-            O projeto incentiva a prática esportiva como instrumento de formação humana.
-            Oferecemos aulas de futebol, vôlei e capoeira, estimulando o trabalho em equipe e o respeito mútuo.
-        </p>
+        <p>O projeto incentiva a prática esportiva como instrumento de formação humana...</p>
         <button onclick="document.getElementById('modal2').close()">Fechar</button>
     </dialog>
 
     <dialog id="modal3">
         <h3>Projeto Cultura Viva</h3>
-        <p>
-            A iniciativa promove oficinas de música, teatro e dança para crianças e adolescentes da comunidade.
-            Acreditamos que a cultura é essencial para a construção da identidade e para o fortalecimento social.
-        </p>
+        <p>A iniciativa promove oficinas de música, teatro e dança...</p>
         <button onclick="document.getElementById('modal3').close()">Fechar</button>
     </dialog>
 
