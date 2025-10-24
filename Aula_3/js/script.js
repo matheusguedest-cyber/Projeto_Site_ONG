@@ -1,14 +1,11 @@
-// script.js
-// Manipulação de DOM, SPA simples, sistema de templates e verificação de consistência de formulários
 
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Manipulação de DOM: mensagem de boas-vindas no index.html ---
+ 
   const mensagem = document.getElementById("mensagemBoasVindas");
   if (mensagem) {
     mensagem.textContent = "Seja muito bem-vindo à Sementes do Amanhã!";
   }
 
-  // --- SPA simples: mostrar formulário de sugestão no NossosProjetos.html ---
   const botaoAbrir = document.getElementById("abrirForm");
   const formSugestao = document.getElementById("formSugestao");
 
@@ -19,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Sistema de templates + verificação de consistência de dados ---
   const form = document.getElementById("sugestaoProjetoForm");
 
   if (form) {
@@ -29,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const nome = document.getElementById("nomeProjeto").value.trim();
       const descricao = document.getElementById("descricaoProjeto").value.trim();
 
-      // --- Verificação de consistência ---
       const erros = [];
 
       if (!nome) {
@@ -44,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
         erros.push("A descrição deve ter pelo menos 10 caracteres.");
       }
 
-      // --- Exibir mensagens de erro ---
       const avisoAnterior = document.getElementById("avisoErro");
       if (avisoAnterior) avisoAnterior.remove();
 
@@ -59,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // --- Se estiver tudo certo, cria um novo "template" de projeto ---
       const template = `
         <section>
           <h2>${nome}</h2>
@@ -69,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       document.querySelector(".projetos-grid").insertAdjacentHTML("beforeend", template);
 
-      // Limpa o formulário e mostra mensagem de sucesso
       form.reset();
 
       const avisoSucesso = document.createElement("div");
@@ -79,7 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
       avisoSucesso.textContent = "Sugestão enviada com sucesso!";
       form.appendChild(avisoSucesso);
 
-      // Remove a mensagem após alguns segundos
       setTimeout(() => avisoSucesso.remove(), 4000);
     });
   }
