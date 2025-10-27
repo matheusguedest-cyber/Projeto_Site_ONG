@@ -1,4 +1,22 @@
-# Projeto_Site_ONG
-Atividade da matéria de Desenvolvimento Front-End referente ao curso de Análise e Desenvolvimento de Sistemas.
+# 🌱 Sementes do Amanhã
 
-Obs: Na aula 1, foi requisitado na entrega a validação dos arquivos HTML via W3C Validator. Os prints com as validações estão em anexo na pasta Imagens.
+## 📖 Descrição
+Projeto desenvolvido como parte da disciplina de Desenvolvimento Front-End.  
+O site da ONG **Sementes do Amanhã** apresenta seus projetos sociais, fomenta o voluntariado e promove doações.
+
+---
+
+## 🧠 Tecnologias Utilizadas
+- HTML5 semântico  
+- CSS3 (Grid, Flexbox e Responsividade)  
+- JavaScript (DOM, verificação de formulários e SPA básico)  
+
+---
+
+## 🚀 Funcionalidades
+- Navegação SPA básica com JavaScript
+- Verificação de consistência em formulários
+- Layout responsivo e acessível (WCAG 2.1 AA)
+- Modo escuro acessível
+
+
